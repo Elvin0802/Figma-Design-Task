@@ -1,0 +1,53 @@
+﻿<Window x:Class="Clients.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clients.Views"
+        mc:Ignorable="d"
+        
+        WindowStartupLocation="CenterScreen" Background="#edf1f7"
+        Title="New Client" Height="650" Width="400" FontFamily="Arial" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="clients" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Margin="0,0,0,0" FontSize="34" Foreground="#0c1f3d" FontWeight="Bold"/>
+
+        <Label Grid.Row="2" Content="username" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBox Name="tb1" Grid.Row="3" TextChanged="TBoxTextChanged1" VerticalContentAlignment="Center"
+                 FontSize="16"/>
+
+        <Label Grid.Row="4" Content="password" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBox Name="tb2" Grid.Row="5" TextChanged="TBoxTextChanged2" VerticalContentAlignment="Center"
+                 FontSize="16"/>
+
+        <Label Grid.Row="3" Name="txtPlaceholder1" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Content="enter your username" Background="Transparent"
+               Opacity="0.5" IsHitTestVisible="False"/>
+
+        <Label Grid.Row="5" Name="txtPlaceholder2" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Content="enter your password" Background="Transparent"
+               Opacity="0.5" IsHitTestVisible="False"/>
+
+
+        <Button Grid.Row="8" Template="{StaticResource OwnButton}" Content="log in" FontSize="17"
+                Height="60" Margin="10,20,10,0" Background="#0c1f3d" Foreground="White"/>
+
+    </Grid>
+
+
+</Window>

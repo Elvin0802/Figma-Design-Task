@@ -1,0 +1,91 @@
+﻿<Window x:Class="Clients.Views.OrderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clients.Views"
+        mc:Ignorable="d"
+        Background="#edf1f7"
+        WindowStartupLocation="CenterScreen"
+    
+        Title="New Order" Height="700" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="5" Background="WhiteSmoke">
+            <Label Template="{DynamicResource OwnLabel}" FontFamily="Arial" Foreground="#0c1f3d"
+                   FontSize="14"
+                   FontWeight="SemiBold" Content="clients" HorizontalAlignment="Left" VerticalContentAlignment="Top" />
+            <Label Template="{DynamicResource OwnLabel}" FontFamily="Arial" Foreground="#0c1f3d" 
+                   FontSize="14"
+                   FontWeight="SemiBold" Content="home" HorizontalAlignment="Right" VerticalContentAlignment="Top" />
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Label Template="{DynamicResource OwnLabel}" Content="Name of the order" Foreground="#0c1f3d" HorizontalAlignment="Left" FontFamily="Arial" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+                    <TextBox Name="tb1" TextChanged="TextBox_TextChanged1" Margin="5" Height="40" 
+                             VerticalContentAlignment="Center"/>
+                    <Label Margin="10,0,0,0"  Name="l1" Content="Type the order name same with the order blank" VerticalAlignment="Center"  Foreground="LightGray" FontSize="15"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Label Template="{DynamicResource OwnLabel}" Content="Order Quantity" Foreground="#0c1f3d" HorizontalAlignment="Left" FontFamily="Arial" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+                    <TextBox  Name="tb2"  TextChanged="TextBox_TextChanged2" Margin="5" Height="40"  VerticalContentAlignment="Center"/>
+                    <Label Margin="10,0,0,0"  Name="l2" Content="How much do you want?" VerticalAlignment="Center"   Foreground="LightGray" FontSize="15"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <Label Template="{DynamicResource OwnLabel}" Content="Order opening day" Foreground="#0c1f3d" HorizontalAlignment="Left" FontFamily="Arial" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+
+                    <Grid HorizontalAlignment="Left">
+                        <TextBox  Name="tb3"  TextChanged="TextBox_TextChanged3" Margin="5" Height="33"  VerticalContentAlignment="Center" Width="100"/>
+                        <Label Margin="10,0,0,0"  Name="l3"  Content="Day" VerticalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Center">
+                        <TextBox  Name="tb4"  TextChanged="TextBox_TextChanged4" VerticalContentAlignment="Center" Margin="5" Height="33" Width="100"/>
+                        <Label Margin="10,0,0,0"  Name="l4"  Content="Month" VerticalAlignment="Center"  Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Right">
+                        <TextBox  Name="tb5"  TextChanged="TextBox_TextChanged5" VerticalContentAlignment="Center" Margin="5" Height="33" Width="100"/>
+                        <Label Margin="10,0,0,0"  Name="l5"  Content="Year" VerticalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="3">
+                <Label Template="{DynamicResource OwnLabel}" Content="Order delivery day" Foreground="#0c1f3d" HorizontalAlignment="Left" FontFamily="Arial" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+
+                    <Grid HorizontalAlignment="Left">
+                        <TextBox  Name="tb6"  TextChanged="TextBox_TextChanged6" VerticalContentAlignment="Center" Margin="5" Height="40" Width="100"/>
+                        <Label Margin="10,0,0,0" Name="l6"  Content="Day" VerticalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Center">
+                        <TextBox  Name="tb8"  TextChanged="TextBox_TextChanged8" VerticalContentAlignment="Center" Margin="5" Height="40" Width="100"/>
+                        <Label Margin="10,0,0,0"  Name="l8"  Content="Month" VerticalAlignment="Center"  Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Right">
+                        <TextBox  Name="tb7"  TextChanged="TextBox_TextChanged7" VerticalContentAlignment="Center" Margin="5" Height="40" Width="100"/>
+                        <Label Margin="10,0,0,0"  Name="l7"  Content="Year" VerticalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+
+        </Grid>
+        <Grid Grid.Row="3">
+            <Button Grid.Row="2" Template="{DynamicResource OwnButton}" Content="Register" Background="#0c1f3d" 
+                    FontSize="16" Height="50" Width="330" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>

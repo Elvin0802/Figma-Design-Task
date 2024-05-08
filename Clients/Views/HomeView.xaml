@@ -1,0 +1,41 @@
+﻿<Window x:Class="Clients.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clients.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="#edf1f7" Title="Home" Height="700" Width="350">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Template="{DynamicResource OwnLabel}" Content="Clients" FontFamily="Arial" Foreground="#01133d" FontWeight="Bold" BorderBrush="Transparent" FontSize="30" />
+            <Label Template="{DynamicResource OwnLabel}" Content="Welcome Tunar!" FontFamily="Arial" Foreground="#1E49EC" FontSize="12"/>
+
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid Height="400">
+                <Button Margin="10" VerticalAlignment="Top" Width="320" Height="170" Content="Create new client" Background="#01133d" Template="{DynamicResource OwnButton}" FontFamily="Arial" FontSize="25" HorizontalAlignment="Center"/>
+                <Button Margin="10" VerticalAlignment="Bottom" Width="320" Height="170" Content="All clients" Background="#01133d" Template="{DynamicResource OwnButton}" FontFamily="Arial" FontSize="25" HorizontalAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
